@@ -29,5 +29,5 @@ class HYRquest{
         return this.request({...config,method:'post'});
     }
 }
-
-export default new HYRquest(BASE_URL,TIMEOUT);
+const hyrequest=new HYRquest(BASE_URL,TIMEOUT);
+export default hyrequest;

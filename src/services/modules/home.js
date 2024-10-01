@@ -12,3 +12,15 @@ export function getHomeHighScoreData(){
         url:'/home/highscore'
     })
 }
+
+export function getHomeDiscountData(){
+    return hyrequest.get({
+        url:'/home/discount'
+    })
+}
+
+export function getHomeHotRecmmendData(){
+    return hyrequest.get({
+        url:'/home/hotrecommenddest'
+    })
+}

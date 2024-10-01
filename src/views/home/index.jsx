@@ -5,6 +5,8 @@ import HomeBanner from './c-cpns/home-banner'
 import { HomeWrapper } from './style'
 import { fetchHomeDataAction } from '@/store/modules/home'
 import HomeSectionV1 from './c-cpns/home-section-v1'
+import HomeSectionV2 from './c-cpns/home-section-v2'
+import { isEmptyO } from '@/utils'
 
 
 
@@ -16,16 +18,20 @@ const Home = memo(() => {
   useEffect(() => {
     dispatch(fetchHomeDataAction())
   }, [dispatch])
-  
+
 
   //从redux中获取数据
-  const { goodPriceInfo, highScoreInfo } = useSelector(state => state.home, shallowEqual);
+  const { goodPriceInfo, highScoreInfo, discountInfo,hotrecommend } = useSelector(state => state.home, shallowEqual);
+
   return (
     <HomeWrapper>
       <HomeBanner />
       <div className="content">
-        <HomeSectionV1 infoData={goodPriceInfo} />
-        <HomeSectionV1 infoData={highScoreInfo} />
+        {/* 有数据再去渲染组件，没有数据，就不去渲染，可以减少渲染的次数 */}
+        {isEmptyO(discountInfo) && <HomeSectionV2 infoData={discountInfo} />}
+        {isEmptyO(hotrecommend)&& <HomeSectionV2 infoData={hotrecommend}/>}
+        {isEmptyO(goodPriceInfo)&&<HomeSectionV1 infoData={goodPriceInfo} />}
+        {isEmptyO(highScoreInfo)&&<HomeSectionV1 infoData={highScoreInfo} />}
       </div>
     </HomeWrapper>
   )
