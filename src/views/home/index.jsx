@@ -8,7 +8,6 @@ import HomeSectionV1 from './c-cpns/home-section-v1'
 import HomeSectionV2 from './c-cpns/home-section-v2'
 import { isEmptyO } from '@/utils'
 import HomeLongfor from './c-cpns/home-longfor'
-import ScrollView from '@/base-ui/scroll-view'
 import HomeSectionV3 from './c-cpns/home-section-v3'
 
 

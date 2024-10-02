@@ -1,13 +1,27 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import { EntireWrapper } from './style'
+import EntireFilter from './c-cpns/entire-filter'
+import EntireRooms from './c-cpns/entire-rooms'
+import EntirePagination from './c-cpns/entire-pagination'
+import {useDispatch } from 'react-redux'
+import { fetchEntireDataAction } from '@/store/modules/entire'
+
 
 const Entire = memo(() => {
+
+  const dispatch=useDispatch();
+  useEffect(()=>{
+    dispatch(fetchEntireDataAction({offset:20*2,currentPage:20}))
+  },[dispatch])
+  
+  
+ 
   return (
-   <EntireWrapper>
-    <div className="filter">filter</div>
-    <div className="rooms">rooms</div>
-    <div className="pagination">pagination</div>
-   </EntireWrapper>
+    <EntireWrapper>
+      <EntireFilter />
+      <EntireRooms />
+      <EntirePagination />
+    </EntireWrapper>
   )
 })
 

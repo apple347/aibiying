@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo } from 'react'
 import { FooterWrapper } from './style'
 import IconMoreArrow from '@/assets/svg/icon-more-arrow'
@@ -24,8 +23,5 @@ const SectionFooter = memo((props) => {
   )
 })
 
-SectionFooter.propTypes = {
-
-}
 
 export default SectionFooter

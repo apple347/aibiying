@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 import React, { memo } from 'react'
 import { ItemWrapper } from './style'
 import { Rate } from 'antd';
-import {HeartTwoTone } from '@ant-design/icons'
 
 const RoomItem = memo((props) => {
 
