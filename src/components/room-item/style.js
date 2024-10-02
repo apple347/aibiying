@@ -6,7 +6,7 @@ export const ItemWrapper=styled.div`
   width: ${props => props.itemwidth};
   padding: 8px;
   margin: 8px 0;
-
+  flex-shrink: 0;
   .inner {
     width: 100%;
     position: relative;

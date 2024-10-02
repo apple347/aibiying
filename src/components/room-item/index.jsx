@@ -2,6 +2,7 @@ import PropTypes from 'prop-types'
 import React, { memo } from 'react'
 import { ItemWrapper } from './style'
 import { Rate } from 'antd';
+import {HeartTwoTone } from '@ant-design/icons'
 
 const RoomItem = memo((props) => {
 
@@ -23,7 +24,7 @@ const RoomItem = memo((props) => {
             disabled 
             allowHalf
             value={itemData?.star_rating??2}
-            style={{ color: '#00848a', fontSize: '12px' }}
+            style={{ color: '#00848a', fontSize: '12px'}}
           />
           <span className="count">{itemData.reviews_count}</span>
           {
