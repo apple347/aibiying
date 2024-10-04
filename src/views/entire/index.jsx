@@ -11,8 +11,8 @@ const Entire = memo(() => {
 
   const dispatch=useDispatch();
   useEffect(()=>{
-    dispatch(fetchEntireDataAction({offset:20*2,currentPage:20}))
-  },[dispatch])
+    dispatch(fetchEntireDataAction()
+  )},[dispatch])
   
   
  
