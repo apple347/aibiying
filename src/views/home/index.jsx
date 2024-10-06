@@ -9,6 +9,7 @@ import HomeSectionV2 from './c-cpns/home-section-v2'
 import { isEmptyO } from '@/utils'
 import HomeLongfor from './c-cpns/home-longfor'
 import HomeSectionV3 from './c-cpns/home-section-v3'
+import { changeHeaderConfigAction } from '@/store/modules/main'
 
 
 
@@ -18,7 +19,8 @@ const Home = memo(() => {
   /* 派发异步的事件，发送网络请求 */
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchHomeDataAction())
+    dispatch(fetchHomeDataAction());
+    dispatch(changeHeaderConfigAction({isFixed:true}))
   }, [dispatch])
 
 

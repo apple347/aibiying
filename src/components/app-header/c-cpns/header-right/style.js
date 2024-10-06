@@ -47,6 +47,7 @@ font-weight: 600;
 
     .panel{
         position: absolute;
+        z-index: 9999;
         right: 0;
         top: 60px;
         width: 240px;
