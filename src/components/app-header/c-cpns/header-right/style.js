@@ -7,12 +7,12 @@ display: flex;
 justify-content: flex-end;
 align-items: center;
 font-weight: 600;
-
+color: ${props=>props.theme.text.PrimaryColor};
 
 .btns{
     display: flex;
     align-items: center;
-
+    color: ${props=>props.theme.isAlpha?'#fff':props.theme.text.PrimaryColor};
 
 
 
@@ -25,7 +25,7 @@ font-weight: 600;
         border-radius: 22px;
 
         &:hover{
-            background-color: #f5f5f5;
+            background-color: ${props=>props.theme.isAlpha?'rgba(255,255,255,.1)':'#f5f5f5'};
         }
     }
 
